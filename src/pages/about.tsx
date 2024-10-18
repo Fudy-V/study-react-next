@@ -27,7 +27,7 @@ export default function Home() {
         className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}
       >
         <main className={styles.main}>
-          <h1>Index Page</h1>
+          <h1>About Page</h1>
           <ol>
             <li>
                Get started by editing <code>src/pages/index.tsx</code>.
