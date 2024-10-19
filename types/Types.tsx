@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 
-export type Prop = {
+export interface Prop  {
   children?: ReactElement;
   //   title: string;
   page: string;
@@ -9,4 +9,11 @@ export type Prop = {
   obj?: object;
   code?: ReactElement;
   onClick?: () => void;
+};
+
+export interface Item {
+  href: string;
+  image?: ReactElement;
+  description: string;
+  className:string
 };
