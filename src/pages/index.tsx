@@ -11,7 +11,6 @@ import { eventType } from "@/types";
 export default function Home() {
   const handleClick = useCallback((e: eventType) => {
     e.preventDefault();
-    alert(1);
   }, []);
 
   return (
