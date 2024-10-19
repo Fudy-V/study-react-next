@@ -1,6 +1,6 @@
 import Head from "next/head";
 import localFont from "next/font/local";
-import styles from "@/styles/Home.module.css";
+import classes from "@/styles/Home.module.css";
 import { Footer } from "../../compornents/Footer";
 import { Main } from "../../compornents/Main";
 
@@ -24,7 +24,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}>
+      <div className={`${classes.page} ${geistSans.variable} ${geistMono.variable}`}>
         <Main page="index" />
         <Footer />
       </div>
