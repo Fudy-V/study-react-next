@@ -3,7 +3,7 @@ import { Headline } from "./Headline";
 import { Links } from "./Links";
 import { Prop } from "../types/Types";
 
-export default function Main(props: Prop) {
+export function Main(props: Prop) {
   return (
     <>
       <main className={styles.main}>
