@@ -1,6 +1,8 @@
 import { ReactElement } from "react";
 
-export interface Prop  {
+export type eventType = React.MouseEvent<HTMLAnchorElement>;
+
+export interface Prop {
   children?: ReactElement;
   page: string;
   number?: number;
@@ -8,11 +10,11 @@ export interface Prop  {
   obj?: object;
   code?: ReactElement;
   onClick?: () => void;
-};
+}
 
 export interface Item {
   href: string;
   image?: ReactElement;
   description: string;
-  className:string
-};
+  className: string;
+}
