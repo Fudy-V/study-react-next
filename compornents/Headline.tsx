@@ -7,9 +7,7 @@ export function Headline(props: Prop) {
     <div>
       <h1 className={styles.title}>{props.page} page</h1>
 
-      <p>
-        get started by editing <code>pages/{props.page}.tsx</code>
-      </p>
+      <p>get started by editing {props.children}</p>
     </div>
   );
 }
