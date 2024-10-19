@@ -1,7 +1,7 @@
 import classes from "@/styles/Home.module.css";
-import { Headline } from "./Headline";
-import { Links } from "./Links";
-import { Prop } from "../types/Types";
+import { Headline } from "../Headline";
+import { Links } from "../Links";
+import { Prop } from "@/types";
 
 export function Main(props: Prop) {
   return (

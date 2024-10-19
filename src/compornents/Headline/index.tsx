@@ -1,6 +1,6 @@
 import React from "react";
-import { Prop } from "../types/Types";
-import classes from "@/../compornents/Headline.module.css";
+import { Prop } from "@/types";
+import classes from "./Headline.module.css";
 
 export function Headline(props: Prop) {
   return (

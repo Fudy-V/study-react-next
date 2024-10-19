@@ -1,6 +1,6 @@
 import Image from "next/image";
-import classes from "@/../compornents/Links.module.css";
-import { Item } from "../types/Types";
+import classes from "./Links.module.css";
+import { Item } from "@/types";
 
 
 

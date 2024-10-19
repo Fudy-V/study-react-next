@@ -1,5 +1,5 @@
 import Image from "next/image";
-import classes from "@/../compornents/Footer.module.css";
+import classes from "./Footer.module.css";
 
 export function Footer() {
   return (

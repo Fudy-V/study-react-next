@@ -2,7 +2,6 @@ import { ReactElement } from "react";
 
 export interface Prop  {
   children?: ReactElement;
-  //   title: string;
   page: string;
   number?: number;
   array?: Array<number | string>;
