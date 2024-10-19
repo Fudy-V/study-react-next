@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { geistSans, geistMono } from "@/pages/fonts";
+import { geistSans, geistMono } from "@/fonts";
 import classes from "@/styles/Home.module.css";
 import { Footer } from "@/compornents/Fotter";
 import { Main } from "@/compornents/Main";
