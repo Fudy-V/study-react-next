@@ -16,17 +16,33 @@
   font-family: var(--font-geist-sans);
 }
 
-.counterButton {
-  /* display: inline-block; */
-  width: 70px;
-  height: 30px;
-  border: none;
-  border-radius: 10%;
-  box-shadow: 3px 2px #333;
-  transition: 0.25s;
+.centerWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .counter {
+    margin: 20px;
+    padding: 10px;
+    width: 60px;
+    text-align: center;
+    background-color: #f2f2f2;
+    border: 2px solid #888;
+    border-radius: 5%;
+    font-size: 30px;
+  }
+  .counterButton {
+    width: 70px;
+    height: 30px;
+    border: none;
+    border-radius: 10%;
+    box-shadow: 3px 2px #333;
+    transition: 0.25s;
 
-  &:hover {
-    box-shadow: none;
+    &:hover {
+      box-shadow: none;
+    }
   }
 }
 

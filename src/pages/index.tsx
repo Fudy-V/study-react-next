@@ -31,11 +31,13 @@ export default function Home() {
       </Head>
 
       <Header />
-      <div className={`${classes.page} ${geistSans.variable} ${geistMono.variable}`}>
-        <h1>{foo}</h1>
+      <div className={classes.centerWrapper}>
+        <h1 className={classes.counter}>{foo}</h1>
         <button className={classes.counterButton} onClick={handleClick}>
           ボタン
         </button>
+      </div>
+      <div className={`${classes.page} ${geistSans.variable} ${geistMono.variable}`}>
         <Main page="index" />
 
         <Footer />
