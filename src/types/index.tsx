@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 
-export type eventType = React.MouseEvent<HTMLButtonElement>;
+export type eventType = React.ChangeEvent<HTMLInputElement>;
 
 export interface Prop {
   children?: ReactElement;
