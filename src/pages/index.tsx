@@ -13,7 +13,7 @@ export default function Home() {
   const [isShow, setIsShow] = useState(true);
 
   const handleClick = () => {
-    setCount((count) => count + 1);
+    setCount((prevCount) => prevCount + 1);
   };
 
   const handleChange = useCallback((e: eventType) => {
@@ -41,7 +41,10 @@ export default function Home() {
         <button className={classes.counterButton} onClick={handleClick}>
           ボタン
         </button>
-        <button className={classes.counterButton} onClick={() => setIsShow((isShow) => !isShow)}>
+        <button
+          className={classes.counterButton}
+          onClick={() => setIsShow((prevIsShow) => !prevIsShow)}
+        >
           {isShow ? "非表示" : "表示"}
         </button>
         <input type="text" value={text} onChange={handleChange} />
