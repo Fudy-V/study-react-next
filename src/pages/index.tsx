@@ -11,6 +11,7 @@ export default function Home() {
   const [count, setCount] = useState(0);
   const [text, setText] = useState("");
   const [isShow, setIsShow] = useState(true);
+  const [array, setArray] = useState<string[]>([]);
 
   const handleClick = () => {
     setCount((prevCount) => prevCount + 1);
@@ -19,6 +20,17 @@ export default function Home() {
   const handleChange = useCallback((e: eventType) => {
     setText(e.target.value);
   }, []);
+
+  const handleAdd = useCallback(() => {
+    setArray((prevArray) => {
+      if (prevArray.some((item) => item === text)) {
+        alert("SAME!!!");
+        return prevArray;
+      }
+
+      return [...prevArray, text];
+    });
+  }, [text]);
 
   // 処理→マウント時、返り値→アンマウント時の処理
   useEffect(() => {
@@ -48,6 +60,12 @@ export default function Home() {
           {isShow ? "非表示" : "表示"}
         </button>
         <input type="text" value={text} onChange={handleChange} />
+        <button onClick={handleAdd}>追加</button>
+        <ul>
+          {array.map((item) => {
+            return <li key={item}>{item}</li>;
+          })}
+        </ul>
       </div>
       <div className={`${classes.page} ${geistSans.variable} ${geistMono.variable}`}>
         <Main page="index" />
