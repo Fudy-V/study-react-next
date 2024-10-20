@@ -5,14 +5,13 @@ import { Footer } from "@/compornents/Fotter";
 import { Main } from "@/compornents/Main";
 import { Header } from "@/compornents/Header";
 import { useEffect, useState } from "react";
-import { eventType } from "@/types";
+// import { eventType } from "@/types";
 
 export default function Home() {
-  const [foo, setFoo] = useState(1);
+  const [count, setCount] = useState(0);
 
-  const handleClick = (e: eventType) => {
-    e.preventDefault();
-    setFoo((foo) => foo + 1);
+  const handleClick = () => {
+    setCount((count) => count + 1);
   };
 
   // 処理→マウント時、返り値→アンマウント時の処理
@@ -32,7 +31,7 @@ export default function Home() {
 
       <Header />
       <div className={classes.centerWrapper}>
-        <h1 className={classes.counter}>{foo}</h1>
+        <h1 className={classes.counter}>{count}</h1>
         <button className={classes.counterButton} onClick={handleClick}>
           ボタン
         </button>
