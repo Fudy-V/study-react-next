@@ -4,14 +4,16 @@ import classes from "@/styles/Home.module.css";
 import { Footer } from "@/compornents/Fotter";
 import { Main } from "@/compornents/Main";
 import { Header } from "@/compornents/Header";
-import { useEffect, useCallback } from "react";
-import Link from "next/link";
+import { useEffect, useState } from "react";
 import { eventType } from "@/types";
 
 export default function Home() {
-  const handleClick = useCallback((e: eventType) => {
+  const [foo, setFoo] = useState(1);
+
+  const handleClick = (e: eventType) => {
     e.preventDefault();
-  }, []);
+    setFoo((foo) => foo + 1);
+  };
 
   // 処理→マウント時、返り値→アンマウント時の処理
   useEffect(() => {
@@ -29,10 +31,11 @@ export default function Home() {
       </Head>
 
       <Header />
-      <Link href="/about" onClick={handleClick}>
-        ボタン
-      </Link>
       <div className={`${classes.page} ${geistSans.variable} ${geistMono.variable}`}>
+        <h1>{foo}</h1>
+        <button className={classes.counterButton} onClick={handleClick}>
+          ボタン
+        </button>
         <Main page="index" />
 
         <Footer />
